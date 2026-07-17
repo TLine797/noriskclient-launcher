@@ -78,6 +78,7 @@ export function AppLayout({
     // DISABLED: Advent Calendar (seasonal feature)
     // { id: "advent-calendar", icon: "solar:gift-bold", label: t("nav.advent") },
     { id: "settings", icon: "solar:settings-bold", label: t("nav.settings") },
+    { id: "nrcplus", icon: "solar:zap-bold", label: t("nav.nrcplus"), imageSrc: "/logo.png" },
   ];
   const { qualityLevel } = useQualitySettingsStore();
   const { isBackgroundAnimationEnabled, accentColor: themeAccentColor, accentColor } = useThemeStore();

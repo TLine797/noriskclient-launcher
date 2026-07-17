@@ -352,6 +352,7 @@ export function App() {
         'solar:widget-bold',
         'solar:emoji-funny-circle-bold',
         'solar:shop-bold',
+        'solar:zap-bold',
 
         // Search & Filters
         'solar:magnifer-bold',

@@ -17,6 +17,7 @@ interface NavItem {
   icon: string;
   label: string;
   action?: () => void;
+  imageSrc?: string;
 }
 
 interface VerticalNavbarProps {
@@ -144,7 +145,20 @@ export function VerticalNavbar({
               ref={(el) => (buttonRefs.current[item.id] = el)}
             >
               <NavButton
-                icon={<Icon icon={item.icon} className="w-8 h-8" />}
+                icon={
+                  item.imageSrc ? (
+                    <img
+                      src={item.imageSrc}
+                      alt={item.label}
+                      className="w-8 h-8 object-contain"
+                      style={{
+                        filter: "brightness(0) invert(70%) sepia(100%) saturate(500%) hue-rotate(5deg) brightness(1.1)",
+                      }}
+                    />
+                  ) : (
+                    <Icon icon={item.icon} className="w-8 h-8" />
+                  )
+                }
                 isActive={active === item.id}
                 onClick={() => handleItemClick(item.id)}
                 onMouseEnter={() => handleMouseEnter(item.id)}
